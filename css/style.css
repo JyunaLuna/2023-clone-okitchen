@@ -1,0 +1,1267 @@
+@font-face {
+  font-family: "OTTOGISans";
+  src: url("../font/OTTOGISans_Light.woff") format("woff"),
+    url("../font/OTTOGISans_Medium.woff") format("woff");
+}
+
+body {
+  font-family: "OTTOGISans", "Malgun Gothic", "맑은 고딕", "돋움", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #777;
+  /* 스크롤바 없애기 */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+input {
+  background-color: transparent;
+  font: 22px "OTTOGISans";
+  border: none;
+  border-bottom: 2px solid #fff;
+  vertical-align: middle;
+}
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+input:-ms-input-placeholder {
+  color: #fff;
+}
+textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+textarea:-ms-input-placeholder {
+  color: #fff;
+}
+i {
+  display: inline-block;
+}
+button {
+  font-family: "OTTOGISans", "Malgun Gothic", "맑은 고딕", "돋움", sans-serif;
+  font-size: 16px;
+  color: #777;
+}
+
+.swiper-container {
+  position: relative;
+}
+.ellip {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container {
+  width: 1280px;
+  min-width: 1300px;
+  margin: auto auto;
+  position: relative;
+  display: block;
+}
+.mr0 {
+  margin-right: 0 !important;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.scale {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.scale:hover {
+  transform: scale(1.1);
+}
+
+/* header */
+.gnbSearchB {
+  background: linear-gradient(to right, #bf132b, #f64646);
+}
+.gnbSearch {
+  position: relative;
+  min-width: 1300px;
+  height: 105px;
+  z-index: 10;
+}
+.logo > a {
+  display: block;
+  width: 240px;
+  height: 66px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  background: url(../images/common/logo.png) no-repeat center;
+  font-size: 0;
+}
+
+.gnbSchArea {
+  width: 910px;
+  height: 75px;
+  margin-left: 370px;
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+.searchForm {
+  float: left;
+}
+form.saerchF {
+  position: relative;
+}
+form.saerchF > input {
+  display: block;
+  color: #fff;
+  width: 580px;
+  padding: 10px 0 18px;
+}
+form.saerchF > label > a.topSch > img {
+  position: absolute;
+  bottom: 60%;
+  right: 1%;
+  transform: translateY(50%);
+}
+
+.topTag {
+  float: right;
+  padding-top: 10px;
+}
+.topTag > a {
+  display: inline-block;
+  font: 18px "OTTOGISans";
+  color: #fff;
+  margin-left: 20px;
+}
+.topTag a:hover {
+  text-decoration: underline;
+}
+
+/* gnb */
+#gnb {
+  position: relative;
+  width: 100%;
+  height: 68px;
+  border-bottom: 1px solid #d5d5d5;
+}
+ul.gnbNav {
+  position: relative;
+}
+ul.gnbNav > li {
+  float: left;
+  font: bold 20px/68px "OTTOGISans";
+}
+ul.gnbNav > li a {
+  letter-spacing: -1px;
+  color: #454545;
+}
+
+.menu {
+  padding: 0px 18px;
+}
+
+.gnbNav > .menuR {
+  padding-left: 0;
+}
+
+.gnbNav > .menuR > a {
+  color: #f64646;
+}
+
+.gnbNav > .menuR::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #b7b7b7;
+  margin-right: 16px;
+
+  transform: translateY(2px);
+}
+
+.dropdownNav {
+  position: relative;
+}
+.dropdownNav > a {
+  display: block;
+  float: left;
+  position: relative;
+  padding-right: 15px;
+}
+
+.dropdownNav > a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #b7b7b7;
+  margin-left: 15px;
+
+  transform: translateY(2px);
+}
+
+.dropdownNav > a > i {
+  background: url("../images/common/icons.png") no-repeat -15px -15px;
+  width: 34px;
+  height: 34px;
+
+  background-size: 500px auto;
+  transform: translateY(25%);
+}
+
+.dropdown1 {
+  /* display: inline-block; */
+  display: none;
+  z-index: 15;
+
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 350px;
+  background-color: #fff;
+
+  padding: 36px 20px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.col01 {
+  width: 110px;
+  float: left;
+  margin-right: 10px;
+}
+.dropdown1 li {
+  color: #777;
+  padding: 4px 20px;
+  font: 500 17px/30px "OTTOGISans";
+}
+.dropdown1 li:hover {
+  background-color: #f5f5f5;
+}
+
+.col02 {
+  float: right;
+}
+
+.col02 li {
+  padding: 4px 40px 4px 4px;
+}
+
+.col02::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 284px;
+
+  position: absolute;
+  top: 48px;
+  left: 50%;
+
+  background-color: #b7b7b7;
+}
+
+.row01 {
+  display: block;
+}
+.row01 > a {
+  width: 260px;
+  display: inline-block;
+  margin: 40px 20px 4px 20px;
+
+  color: #666;
+  line-height: 18px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.row01 a:hover {
+  color: #f64646;
+}
+
+.row01 > a > i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../images/common/icons.png") no-repeat -95px -50px;
+  background-size: 500px auto;
+
+  margin-right: 5px;
+  transform: translateY(4px);
+}
+.navRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  vertical-align: middle;
+
+  line-height: 34px;
+}
+.navRight > li {
+  list-style: none;
+  float: left;
+  margin-left: 15px;
+  color: #666;
+}
+
+.navRight > li > a.right01::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/common/icons.png) no-repeat -50px -14px;
+  background-size: 460px auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.navRight > li > a.right02::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../images/common/icons.png") no-repeat -50px -46px;
+  background-size: 460px auto;
+
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* 메뉴 마우스오버 */
+.dropdownNav:hover.dropdownNav > a > i {
+  background-position-y: -50px;
+  background-size: 500px auto;
+}
+.dropdownNav:hover.dropdownNav > a {
+  color: #f64646;
+}
+.dropdownNav:hover .dropdown1 {
+  display: inline-block;
+}
+
+.menu:hover a {
+  color: #f64646;
+}
+
+.right01:hover {
+  color: #f64646;
+}
+
+.right02:hover {
+  color: #f64646;
+}
+
+/* mainContent */
+#mainContent {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 725px;
+}
+
+/* 스와이퍼 아이콘 사이즈 변경 */
+:root {
+  --swiper-navigation-size: auto;
+}
+
+/* 스와이퍼 위치조정 */
+.swiper1 .swiper-button-prev,
+.swiper1 .swiper-container-rtl .swiper-button-next,
+.swiper2 .swiper-button-prev,
+.swiper2 .swiper-container-rtl .swiper-button-next {
+  left: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 스와이퍼 디자인 변경 */
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "";
+  background: url("../images/main/visual_arrow.png") no-repeat;
+  width: 40px;
+  height: 70px;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+  background: url("../images/main/visual_arrow.png") no-repeat -40px 0;
+  width: 40px;
+  height: 70px;
+}
+
+.swiper-slide {
+  cursor: pointer;
+}
+
+/* 스와이퍼 메인 배너 */
+.main_visual01 {
+  background: url(../images/main/main_visual01.jpg) no-repeat center/cover;
+}
+.main_visual02 {
+  background: url(../images/main/main_visual02.jpg) no-repeat center/cover;
+}
+.main_visual03 {
+  background: url(../images/main/main_visual03.jpg) no-repeat center/cover;
+}
+.main_visual04 {
+  background: url(../images/main/main_visual04.jpg) no-repeat center/cover;
+}
+.main_visual05 {
+  background: url(../images/main/main_visual05.jpg) no-repeat center/cover;
+}
+.main_visual06 {
+  background: url(../images/main/main_visual06.jpg) no-repeat center/cover;
+}
+.main_visual07 {
+  background: url(../images/main/main_visual07.jpg) no-repeat center/cover;
+}
+
+/* pagination */
+.swiper_btn {
+  position: absolute;
+  left: 16%;
+  bottom: 50px;
+
+  display: block;
+  width: 110px;
+  height: 30px;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 5px;
+  border-radius: 50px;
+  z-index: 30;
+}
+
+.swiper-stop,
+.swiper-start {
+  font-size: 0;
+  display: inline-block;
+  text-align: center;
+}
+.swiper-pagination {
+  margin-left: 4px;
+  z-index: 0;
+  font: bold 16px/22px "OTTOGISans";
+}
+.swiper-stop {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: url(../images/main/visual_stop.png) no-repeat center/cover;
+  z-index: 31;
+}
+.swiper-start {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: url(../images/main/visual_start.png) no-repeat center/cover;
+  z-index: 31;
+}
+
+/* 스와이퍼 메인 배너 내용 */
+.slide_text_box {
+  position: absolute;
+  top: 22%;
+  left: 16%;
+}
+
+.slide_txt {
+  width: 610px;
+  font-size: 32px;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-family: "OTTOGISans";
+}
+.s_txt_under {
+  display: inline-block;
+  border-bottom: 4px solid #fff;
+}
+.s_txt_none {
+  display: inline-block;
+  margin-left: -8px;
+}
+
+.slide_title {
+  font-size: 65px;
+  color: #fff;
+  font-weight: normal;
+  font-family: "OTTOGISans";
+
+  line-height: 68px;
+}
+.s_title_none {
+  display: inline-block;
+}
+.s_title_bold {
+  display: inline-block;
+}
+
+.slide_tag {
+  font-size: 20px;
+  margin-right: 6px;
+}
+.s_tag {
+  display: inline-block;
+
+  color: #666;
+  background: #fff;
+
+  border: 1px solid #bdbbbb;
+  border-radius: 50px;
+
+  padding: 2px 20px 4px;
+  margin: 35px 0;
+}
+
+.slide_btn > button {
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+
+  padding: 16px 40px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f64646;
+  border-radius: 4px;
+}
+.slide_btn > button:hover {
+  background-color: #bf132b;
+}
+.slide_btn > button > i {
+  display: inline-block;
+  width: 15px;
+  height: 8px;
+  background: url(../images/common/btn_mainbtn_arrow.png) no-repeat center/cover;
+  margin-left: 20px;
+
+  vertical-align: middle;
+}
+
+.slide_black_txt {
+  top: 30%;
+}
+
+.slide_black_txt > .slide_txt,
+.slide_black_txt > .slide_title {
+  color: #333;
+}
+.slide_black_txt .s_title_none {
+  font-size: 40px;
+  line-height: 40px;
+}
+.slide_black_txt .s_txt_under {
+  border-color: #333;
+}
+
+.slide_black_txt .s_title_none > strong {
+  font-size: 65px;
+  line-height: 76px;
+}
+
+.slide_black_txt > .slide_btn > button {
+  margin-top: 38px;
+}
+
+/* section01 */
+#section01 {
+  width: 1280px;
+  height: 500px;
+  margin: 100px auto;
+  /* background-color: palegoldenrod; */
+}
+
+#section01 > div {
+  float: left;
+  width: 22.75%;
+  height: 100%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+.con01_tag {
+  background-color: #fff;
+}
+.con01_tag > h2 {
+  font: bold 40px/1.1 "OTTOGISans";
+  color: #333;
+}
+.con01_tag > h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #000;
+  margin: 20px 0 10px;
+}
+.con01_tag_list {
+  margin-top: 8px;
+}
+.con01_tag_list > ul {
+  display: block;
+  margin: 2px;
+}
+.con01_tag_list > ul > li {
+  margin-bottom: 2px;
+}
+.con01_tag_list > ul > li > a {
+  font: 20px/42px "OTTOGISans";
+  background-color: #fff;
+  color: #777;
+
+  border: 1px solid #c1c1c1;
+  border-radius: 40px;
+  padding: 8px 20px;
+}
+.con01_tag_list > ul > li > a:hover {
+  color: #fff;
+  background-color: #f64646;
+  border: 1px solid #f64646;
+}
+
+.con01_class {
+  position: relative;
+  background-color: #ffed93;
+  overflow: hidden;
+}
+.con01_title {
+  color: #333;
+  text-align: center;
+}
+.con01_title > h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.con01_title > h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.con01_class > .swiper {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.con01_class01 {
+  width: 219px;
+  height: 219px;
+  background: url(../images/main/@class_img1.png) no-repeat center;
+}
+.con01_class02 {
+  width: 219px;
+  height: 219px;
+  background: url(../images/main/@class_img2.png) no-repeat center;
+}
+.con01_class03 {
+  width: 219px;
+  height: 219px;
+  background: url(../images/main/@class_img3.png) no-repeat center;
+}
+
+.con01_class_txt {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: 260px;
+}
+.con01_class_txt > h3 {
+  margin-top: 30px;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper2 > .con01_pagination {
+  max-width: 291.19px;
+  max-height: 219.3px;
+  position: absolute;
+  bottom: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* display: inline-block; */
+  z-index: 0;
+}
+.thumb {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+.thumb > a {
+  overflow: hidden;
+  display: block;
+}
+.thumb > a > img {
+  width: 100%;
+  transform: scale(1);
+
+  transition: all 0.3s;
+}
+.thumb > a > img:hover {
+  transform: scale(1.1);
+}
+
+.con01_class .swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  background: url(../images/main/class_arrow.png) no-repeat;
+  width: 28px;
+  height: 10px;
+  margin-top: 1650%;
+}
+
+.con01_class .swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  background: url(../images/main/class_arrow.png) no-repeat -29px 0;
+  width: 28px;
+  height: 10px;
+  margin-top: 1650%;
+}
+
+.con01_title swiper-button-prev {
+  position: absolute;
+  bottom: 2%;
+}
+
+.con01_recipe {
+  position: relative;
+  background-color: #f5eee5;
+  text-align: center;
+}
+.con01_recipe p {
+  margin: 4px 0;
+  font: 16px/1.2 "OTTOGISans";
+  color: #777;
+}
+.item_txt {
+  padding: 30px 0 10px;
+}
+.recipe_h3 {
+  font: bold 22px "OTTOGISans";
+  color: #333;
+  letter-spacing: -1px;
+}
+.more_btn > a {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #acacac;
+  padding: 8px 18px 10px;
+  border-radius: 100px;
+  color: #fff;
+  font: normal 16px/24px "OTTOGISans";
+}
+.more_btn > a:hover {
+  background-color: #f64646;
+}
+
+.con01_tip {
+  background: url(../images/category/sec04_tip_bg.jpg) no-repeat center;
+}
+.con01_tip_txt {
+  color: #fff;
+  padding: 40px;
+}
+.con01_tip_txt > h2 {
+  font: bold 33px/1.2 "OTTOGISans";
+}
+.con01_tip_txt > h3 {
+  margin-top: 30px;
+  font: 16px "OTTOGISans";
+  margin-bottom: 20px;
+}
+
+#section02 {
+  width: 100%;
+  height: 405px;
+  background: url(../images/main/section02_bg_1.jpg) center center;
+}
+#section02 .txt {
+  width: 50%;
+  margin: 50px auto 30px;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+#section02 .txt h3 {
+  font: bold 30px/1.3 "OTTOGISans";
+  color: #333;
+}
+#section02 .txt span.red {
+  font-size: 37px;
+  color: #f64646;
+}
+#section02 .txt span.f43 {
+  font: bold 43px/1.3 "OTTOGISans";
+  color: #333;
+}
+#section02 .txt button {
+  margin: 20px auto 0;
+}
+#section02 .txt button span.btn {
+  border: 2px solid #666;
+  color: #333;
+  border-radius: 50px;
+  padding: 7px 30px;
+}
+#section02 .txt button span.btn-white {
+  display: block;
+  border-color: #666;
+  border-radius: 50px;
+  color: #333;
+  font: 400 20px "OTTOGISans";
+  padding: 7px 30px;
+}
+#section02 .txt button span.btn-white:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* #section03 */
+h2.main {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+h2.main::after {
+  content: "";
+  display: block;
+  width: 37px;
+  height: 2px;
+  background: #000;
+  margin: 20px auto 10px;
+}
+p.main {
+  font-size: 20px;
+  text-align: center;
+}
+#section03 .thmb_list02 {
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+#section03 .thmb_list02 .list_area {
+  display: grid;
+  gap: 0;
+  max-height: 1280px;
+  grid-template-columns: 70fr 4fr 70fr 8fr 70fr 4fr 70fr;
+  grid-template-rows: 346px 222px 30px 315px;
+}
+#section03 .li2_1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+}
+#section03 .li2_2 {
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 1;
+}
+#section03 .li2_3 {
+  grid-column: 7 / span 1;
+  grid-row: 1 / span 1;
+}
+#section03 .li2_4 {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+}
+#section03 .li2_5 {
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
+}
+#section03 .li2_6 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 3;
+}
+#section03 .list_area > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: start;
+}
+#section03 .list_area .big {
+  min-height: 550px;
+}
+#section03 .list_area img {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center center;
+}
+#section03 .list_area .big .info {
+  padding: 30px 0;
+  background: #ffed93;
+}
+#section03 .list_area .big .info .info_tag {
+  width: 90%;
+  margin-left: 20px;
+}
+#section03 .list_area .info .info_tag span {
+  font-size: 16px;
+  color: #666;
+  margin-right: 8px;
+}
+#section03 .list_area .thumb {
+  max-height: none;
+  margin: 0;
+}
+#section03 .list_area .big .info .info_title a {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 20px;
+}
+#section03 .list_area .info {
+  padding: 30px 0 10px;
+}
+#section03 .list_area .info .info_title a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* section04 */
+#section04 {
+  width: auto;
+  background: url(../images/main/section04_bg.jpg) no-repeat center 330px;
+  background-size: contain;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+#section04 .swiper3 {
+  position: relative;
+  width: 100%;
+  margin-top: 45px;
+}
+#section04 .swiper-button-prev,
+#section04 .swiper-button-next {
+  position: relative;
+  z-index: 10;
+}
+
+#section04 .swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  position: absolute;
+  top: 50%;
+  left: 5.4vw;
+  background: url(../images/main/video_arrow.png) no-repeat;
+  background-position: left;
+  width: 79px;
+  height: 21px;
+  margin-top: -300px;
+  margin-left: 24vw;
+}
+#section04 .swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  position: absolute;
+  top: 50%;
+  right: 5.4vw;
+  background: url(../images/main/video_arrow.png) no-repeat;
+  background-position: right;
+  width: 79px;
+  height: 21px;
+  margin-top: -300px;
+  margin-right: 15.5vw;
+}
+#section04 .swiper-slide img {
+  width: auto;
+  max-height: 390px;
+  max-width: 100%;
+  background-position: center center;
+}
+#section04 .swiper-slide .txt {
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  text-align: center;
+}
+#section04 .swiper-slide .txt h3 {
+  margin: 0 auto;
+  font: bold 30px/35px "OTTOGISans";
+  color: #333;
+}
+#section04 .btn-white {
+  position: relative;
+  display: block;
+  min-width: 165px;
+  padding: 5px 40px;
+  margin: 30px auto;
+  border: 2px solid #666;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #333;
+}
+#section04 .btn-white:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: solid 2px #1e1e1e;
+  box-sizing: border-box;
+}
+
+/* section05 */
+#section05 {
+  margin-top: 100px;
+}
+#section05 .thmb_list04 {
+  width: 1280px;
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  margin-bottom: 20px;
+}
+.thmb_list04 .list_area {
+  width: 100%;
+  display: table;
+}
+.thmb_list04 .item {
+  float: left;
+  width: 305px;
+  min-height: 300px;
+  margin-right: 20px;
+  vertical-align: top;
+  padding: 15px 0 30px;
+}
+.thmb_list04 .thmb {
+  position: relative;
+  width: 100%;
+}
+.thmb_list04 .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.thmb_list04 .img img {
+  width: 305px;
+  height: 200px;
+  vertical-align: top;
+}
+.thmb_list04 .thmb .icon {
+  width: 80%;
+  height: 48px;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  text-align: right;
+  z-index: 2;
+}
+.thmb_list04 .thmb .icon i {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url(../images/common/list_icon.png) no-repeat;
+  font-size: 0;
+  margin-right: 7px;
+}
+.thmb_list04 .item:nth-child(4n) {
+  margin-right: 0;
+}
+.thmb_list04 .thmb .icon i.icon_dm {
+  background-position: top;
+}
+.thmb_list04 .thmb .icon i.icon_best {
+  background-position: bottom;
+}
+
+.thmb_list04 .info {
+  padding: 30px 0 10px;
+}
+.thmb_list04 .info .info_tag {
+  min-height: 25px;
+}
+.thmb_list04 .info .info_tag span {
+  font-size: 16px;
+  color: #666;
+  margin-right: 8px;
+}
+.thmb_list04 .info .info_title a {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* section06 */
+#section06 {
+  width: 100%;
+  height: 300px;
+  background: url(../images/main/book_banner.jpg) no-repeat center;
+}
+#section06 .txt {
+  width: 50%;
+  margin: 50px auto 30px;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+#section06 .txt h3 {
+  font: bold 30px/1.3 "OTTOGISans";
+  color: #333;
+}
+#section06 .txt span.red {
+  font-size: 37px;
+  color: #f64646;
+}
+#section06 .txt span.f43 {
+  font: bold 43px/1.3 "OTTOGISans";
+  color: #333;
+}
+#section06 .txt button {
+  margin: 20px auto 0;
+}
+#section06 .txt button span.btn {
+  border: 2px solid #666;
+  color: #333;
+  border-radius: 50px;
+  padding: 7px 30px;
+}
+#section06 .txt button span.btn-white {
+  display: block;
+  border-color: #666;
+  border-radius: 50px;
+  color: #333;
+  font: 400 20px "OTTOGISans";
+  padding: 7px 30px;
+}
+#section06 .txt button span.btn-white:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* footer */
+#footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 1300px;
+  padding-bottom: 40px;
+  background: #bf132b;
+}
+#footer .footerMenu {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  position: relative;
+  background: #a20a1f;
+}
+#footer .contant {
+  display: flex;
+  flex-direction: row;
+}
+#footer .footerMenu li:first-child {
+  padding-left: 0px;
+}
+#footer .footerMenu li {
+  padding: 10px 20px;
+}
+#footer .footerMenu a {
+  font: bold 20px/20px "OTTOGISans";
+  color: #fff;
+}
+#footer .f_info {
+  display: flex;
+  margin-top: 38px;
+  justify-content: space-between;
+}
+#footer .f_info_left {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: #fff;
+  line-height: 1.2;
+}
+#footer .f_info_right {
+  width: 225px;
+  color: #fff;
+  text-align: right;
+}
+#footer .f_info_left h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+#footer .f_info_left span {
+  font-size: 14px;
+  margin-right: 10px;
+}
+#footer .f_info_left .copy {
+  display: block;
+  margin-top: 20px;
+}
+#footer .f_info_right select {
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  line-height: 18px;
+  height: 50px;
+  color: #666;
+  background: #fff url(../images/common/select_family.png) no-repeat 90%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#footer .f_info_right ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 0;
+  justify-content: flex-end;
+  margin: 15px 0;
+  width: 100%;
+}
+#footer .f_info_right li {
+  width: 19%;
+  height: 28px;
+  padding: 0 2%;
+}
+#footer .f_info_right li i {
+  content: "";
+  display: inline-block;
+  background: url(../images/common/icons.png) no-repeat;
+  background-size: 500px auto;
+  width: 40px;
+  height: 28px;
+}
+#footer .f_info_right li i.blog {
+  background-position: -15px -95px;
+}
+#footer .f_info_right li i.facebook {
+  background-position: -50px -95px;
+}
+#footer .f_info_right li i.insta {
+  background-position: -95px -95px;
+}
