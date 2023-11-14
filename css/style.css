@@ -11,15 +11,16 @@ body {
   line-height: 1.5;
   color: #777;
   /* 스크롤바 없애기 */
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 input {
   background-color: transparent;
-  font: 22px "OTTOGISans";
+  font-size: 22px;
+  font-family: "OTTOGISans";
   border: none;
   border-bottom: 2px solid #fff;
   vertical-align: middle;
@@ -586,6 +587,11 @@ ul.gnbNav > li a {
 
 .slide_black_txt > .slide_btn > button {
   margin-top: 38px;
+}
+
+section>.section_start{
+  font-size: 0;
+  text-indent: -999;
 }
 
 /* section01 */
